@@ -1,5 +1,7 @@
 package ru.job4j.di;
 
+import org.springframework.stereotype.Component;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,6 +12,7 @@ import java.util.List;
  * @version 0.1
  * @since 29.05.2020
  */
+@Component
 public class ConsoleInput {
     private final List<String> capacity = new LinkedList<>();
 
