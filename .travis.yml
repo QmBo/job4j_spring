@@ -13,3 +13,4 @@ notifications:
 
 jdk:
   - oraclejdk14
+  -
