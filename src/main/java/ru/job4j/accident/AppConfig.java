@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @SuppressWarnings("SpringFacetCodeInspection")
 @Configuration
-@ComponentScan("ru.job4j.accident")
+@ComponentScan("ru.job4j")
 public class AppConfig {
 
     /**
