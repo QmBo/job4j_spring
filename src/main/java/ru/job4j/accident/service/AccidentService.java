@@ -1,8 +1,8 @@
-package ru.job4j.police.service;
+package ru.job4j.accident.service;
 
 import org.springframework.stereotype.Service;
-import ru.job4j.police.model.Accident;
-import ru.job4j.police.repository.AccidentMem;
+import ru.job4j.accident.model.Accident;
+import ru.job4j.accident.repository.AccidentJdbcTemplate;
 
 import java.util.List;
 
@@ -15,9 +15,9 @@ import java.util.List;
  */
 @Service
 public class AccidentService {
-    private final AccidentMem store;
+    private final AccidentJdbcTemplate store;
 
-    public AccidentService(AccidentMem store) {
+    public AccidentService(AccidentJdbcTemplate store) {
         this.store = store;
     }
 
@@ -27,7 +27,7 @@ public class AccidentService {
      * @return the list
      */
     public List<Accident> allAccidents() {
-        return this.store.getAllAccidents();
+        return this.store.getAll();
     }
 
     /**
@@ -38,6 +38,6 @@ public class AccidentService {
      * @noinspection unused
      */
     public Accident addAccident(final Accident accident) {
-        return this.store.addAccident(accident);
+        return this.store.save(accident);
     }
 }

@@ -1,4 +1,4 @@
-package ru.job4j.police.model;
+package ru.job4j.accident.model;
 
 /**
  * Accident
@@ -7,7 +7,6 @@ package ru.job4j.police.model;
  * @version 0.1
  * @since 29.05.2020
  */
-@SuppressWarnings("unused")
 public class Accident {
     private int id;
     private String name;
@@ -18,6 +17,7 @@ public class Accident {
      * Gets id.
      *
      * @return the id
+     * @noinspection unused
      */
     public int getId() {
         return this.id;

@@ -1,4 +1,4 @@
-package ru.job4j.accident;
+package ru.job4j.accident.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @SuppressWarnings("SpringFacetCodeInspection")
 @Configuration
-@ComponentScan("ru.job4j")
+@ComponentScan("ru.job4j.accident")
 public class AppConfig {
 
     /**
