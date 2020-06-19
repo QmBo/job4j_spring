@@ -1,12 +1,13 @@
 package ru.job4j.accident.repository;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
+//import org.springframework.stereotype.Repository;
 import ru.job4j.accident.model.Accident;
 
 import java.util.List;
 
-@Repository
+/** @noinspection ALL*/
+//@Repository
 public class AccidentJdbcTemplate {
     private final JdbcTemplate jdbc;
 

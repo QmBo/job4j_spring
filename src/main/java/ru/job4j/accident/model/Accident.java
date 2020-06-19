@@ -1,5 +1,7 @@
 package ru.job4j.accident.model;
 
+import javax.persistence.*;
+
 /**
  * Accident
  *
@@ -7,6 +9,8 @@ package ru.job4j.accident.model;
  * @version 0.1
  * @since 29.05.2020
  */
+@Entity
+@Table(name = "accident")
 public class Accident {
     private int id;
     private String name;
@@ -19,6 +23,8 @@ public class Accident {
      * @return the id
      * @noinspection unused
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return this.id;
     }
@@ -39,6 +45,7 @@ public class Accident {
      *
      * @return the name
      */
+    @Column
     public String getName() {
         return this.name;
     }
@@ -59,6 +66,7 @@ public class Accident {
      *
      * @return the text
      */
+    @Column
     public String getText() {
         return this.text;
     }
@@ -79,6 +87,7 @@ public class Accident {
      *
      * @return the address
      */
+    @Column
     public String getAddress() {
         return this.address;
     }
