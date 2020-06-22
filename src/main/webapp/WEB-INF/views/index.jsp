@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
+<c:set var="URL" value="${pageContext.servletContext.contextPath}"/>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -14,8 +15,11 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-11">
             <h2>Police Accidents</h2>
+        </div>
+        <div class="col">
+            <a href="${URL}/logout" class="btn btn-danger">Logout</a>
         </div>
     </div>
     <div class="row">

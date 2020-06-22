@@ -5,6 +5,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 import ru.job4j.accident.config.AppConfig;
 import ru.job4j.accident.config.HbmConfig;
+import ru.job4j.accident.config.SecurityConfig;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;
@@ -21,7 +22,7 @@ public class WebInit implements WebApplicationInitializer {
     /** @noinspection NullableProblems*/
     public void onStartup(ServletContext servletCxt) {
         AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
-        ac.register(AppConfig.class, HbmConfig.class);
+        ac.register(AppConfig.class, HbmConfig.class, SecurityConfig.class);
         ac.refresh();
         DispatcherServlet servlet = new DispatcherServlet(ac);
         ServletRegistration.Dynamic registration = servletCxt.addServlet("app", servlet);
